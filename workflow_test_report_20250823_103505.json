@@ -1,0 +1,193 @@
+{
+  "test_timestamp": "2025-08-23T10:35:05.793848",
+  "run_id": "04e0b274-5582-499d-9c06-f5bbd33f82d7",
+  "test_issue_url": "https://github.com/ritik-prog/n8n-automation-templates-5000/issues/9",
+  "test_repo": "ritik-prog/n8n-automation-templates-5000",
+  "results": [
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "\ud83e\uddea Starting comprehensive workflow test"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "Step 1: Health Checks"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "\u2705 Backend is healthy: {'status': 'healthy', 'timestamp': '2024-01-01T00:00:00Z', 'version': '1.0.0', 'services': {'backend': 'running', 'github': 'connected', 'portia': 'enabled'}}"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "ERROR",
+      "message": "\u274c Frontend check error: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1045c4130>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "WARNING",
+      "message": "\u26a0\ufe0f Frontend not accessible, continuing with backend test"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "Step 2: Integration Checks"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "\u2705 Portia service detected: enabled"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "\u2705 GitHub integration: connected"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "Step 3: Create Run"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "\ud83d\ude80 Creating new run for ritik-prog/n8n-automation-templates-5000"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "\u2705 Run created successfully: 04e0b274-5582-499d-9c06-f5bbd33f82d7"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "Step 4: Monitor Workflow"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "\ud83d\udcca Starting workflow monitoring for run: 04e0b274-5582-499d-9c06-f5bbd33f82d7"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "\ud83d\udd04 Status changed: None \u2192 running"
+    },
+    {
+      "timestamp": "10:34:18",
+      "level": "INFO",
+      "message": "\ud83d\udcc8 Progress: 0/10 steps completed (elapsed: 0.0s)"
+    },
+    {
+      "timestamp": "10:34:27",
+      "level": "INFO",
+      "message": "\ud83d\udcc8 Progress: 2/10 steps completed (elapsed: 5.0s)"
+    },
+    {
+      "timestamp": "10:34:36",
+      "level": "INFO",
+      "message": "\ud83d\udcc8 Progress: 3/10 steps completed (elapsed: 14.8s)"
+    },
+    {
+      "timestamp": "10:34:41",
+      "level": "INFO",
+      "message": "\ud83d\udd04 Status changed: running \u2192 paused"
+    },
+    {
+      "timestamp": "10:34:41",
+      "level": "INFO",
+      "message": "\u23f3 Found waiting gate: propose-fix"
+    },
+    {
+      "timestamp": "10:34:41",
+      "level": "INFO",
+      "message": "\ud83d\udd13 Approving gate: propose-fix with decision: approve"
+    },
+    {
+      "timestamp": "10:34:41",
+      "level": "INFO",
+      "message": "\u2705 Gate propose-fix approveed successfully"
+    },
+    {
+      "timestamp": "10:34:43",
+      "level": "INFO",
+      "message": "\ud83d\udcc8 Progress: 5/10 steps completed (elapsed: 23.1s)"
+    },
+    {
+      "timestamp": "10:34:53",
+      "level": "INFO",
+      "message": "\ud83d\udd04 Status changed: paused \u2192 running"
+    },
+    {
+      "timestamp": "10:34:53",
+      "level": "INFO",
+      "message": "\ud83d\udcc8 Progress: 6/10 steps completed (elapsed: 30.2s)"
+    },
+    {
+      "timestamp": "10:34:58",
+      "level": "INFO",
+      "message": "\ud83d\udd04 Status changed: running \u2192 paused"
+    },
+    {
+      "timestamp": "10:34:58",
+      "level": "INFO",
+      "message": "\u23f3 Found waiting gate: merge-pr"
+    },
+    {
+      "timestamp": "10:34:58",
+      "level": "INFO",
+      "message": "\ud83d\udd13 Approving gate: merge-pr with decision: approve"
+    },
+    {
+      "timestamp": "10:34:58",
+      "level": "INFO",
+      "message": "\u2705 Gate merge-pr approveed successfully"
+    },
+    {
+      "timestamp": "10:35:00",
+      "level": "INFO",
+      "message": "\ud83d\udcc8 Progress: 7/10 steps completed (elapsed: 40.5s)"
+    },
+    {
+      "timestamp": "10:35:05",
+      "level": "INFO",
+      "message": "\ud83d\udd04 Status changed: paused \u2192 completed"
+    },
+    {
+      "timestamp": "10:35:05",
+      "level": "INFO",
+      "message": "\ud83c\udf89 Workflow completed successfully!"
+    },
+    {
+      "timestamp": "10:35:05",
+      "level": "INFO",
+      "message": "Step 5: Final Verification"
+    },
+    {
+      "timestamp": "10:35:05",
+      "level": "INFO",
+      "message": "\u2705 Final run status: completed"
+    },
+    {
+      "timestamp": "10:35:05",
+      "level": "INFO",
+      "message": "\ud83c\udf89 Pull Request created: https://github.com/ritik-prog/n8n-automation-templates-5000/pull/18"
+    },
+    {
+      "timestamp": "10:35:05",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "10:35:05",
+      "level": "INFO",
+      "message": "\ud83c\udf89 Comprehensive workflow test completed successfully!"
+    }
+  ]
+}

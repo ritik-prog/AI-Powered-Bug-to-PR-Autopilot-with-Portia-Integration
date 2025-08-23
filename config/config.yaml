@@ -1,0 +1,29 @@
+allowlist:
+  - "your-org/demo-repo"
+  - "test/repo"
+  - "example/repo"
+  - "ritik-prog/n8n-automation-templates-5000"
+
+slack:
+  channel: "devops-autopilot"
+
+commands:
+  repro: "npm test"
+  test: "npm test"
+
+caps:
+  max_files: 5
+  max_lines: 150
+
+health:
+  type: "lighthouse"
+  url: "http://localhost:3000/"
+
+# Portia integration settings
+portia:
+  enabled: true
+  api_key: "your_portia_api_key_here"
+  base_url: "https://api.portialabs.ai"
+  model: "portia-1"
+  # API keys should be set as environment variables:
+  # PORTIA_API_KEY, OPENAI_API_KEY, ANTHROPIC_API_KEY, etc.
