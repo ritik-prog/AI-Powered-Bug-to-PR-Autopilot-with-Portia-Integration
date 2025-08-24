@@ -1,18 +1,16 @@
-# 🤖 AI-Powered Bug-to-PR Autopilot
+# 🔮 AI-Powered Bug-to-PR Autopilot with Portia Integration
 
-[🎥 Watch the demo](https://drive.google.com/file/d/1jeiM07y4YXAetEf8nGGxjW43lG2sX3yR/view?usp=sharing)
-
-An intelligent automation system that uses **OpenAI AI** to analyze GitHub issues and automatically create professional pull requests with contextual fixes.
+An intelligent automation system that transforms GitHub issues into production-ready pull requests using **Portia AI** for advanced workflow orchestration and **OpenAI** for intelligent content generation.
 
 ## 🎯 What It Does
 
 This system automatically:
 
-- **Analyzes GitHub issues** using AI to understand requirements
-- **Generates intelligent fixes** based on issue context
-- **Creates professional PRs** with comprehensive descriptions
-- **Handles various issue types** (documentation, bugs, features, enhancements)
-- **Provides real-time workflow** with approval gates
+- **Analyzes GitHub issues** using Portia AI for deep understanding and root cause analysis
+- **Generates intelligent fixes** with AI-powered code generation and test case creation
+- **Creates professional PRs** with comprehensive documentation and risk assessment
+- **Provides human-in-the-loop approval** with detailed workflow management
+- **Handles post-deployment verification** with automated health checks
 
 ## 🚀 Quick Start
 
@@ -38,6 +36,7 @@ nano .env
 # Add your API keys:
 GITHUB_TOKEN=ghp_your_github_token_here
 OPENAI_API_KEY=sk-your_openai_api_key_here
+PORTIA_API_KEY=your_portia_api_key_here
 ```
 
 ### 3. **Test AI Integration**
@@ -66,6 +65,13 @@ Open `http://localhost:3000` in your browser and start creating AI-powered PRs!
 3. Click "Create new secret key"
 4. Copy the key (starts with `sk-`)
 
+### **Portia API Key**
+
+1. Go to [Portia Labs](https://portialabs.ai)
+2. Sign up for an account
+3. Navigate to API settings
+4. Generate your API key
+
 ## 🧪 Testing
 
 ### **AI-Powered Test**
@@ -77,7 +83,8 @@ python test_ai_powered.py
 This comprehensive test:
 
 - ✅ Validates API key configuration
-- ✅ Tests AI-powered issue analysis
+- ✅ Tests Portia AI-powered issue analysis
+- ✅ Tests OpenAI-powered fix generation
 - ✅ Creates real GitHub PRs with AI-generated content
 - ✅ Verifies GitHub integration
 - ✅ Shows detailed results and analysis
@@ -94,9 +101,10 @@ This comprehensive test:
 
 ### **Backend (FastAPI)**
 
-- **AI Integration**: OpenAI-powered issue analysis and fix generation
+- **Portia Integration**: Advanced AI workflow orchestration and issue analysis
+- **OpenAI Integration**: Intelligent content generation and fix creation
 - **GitHub API**: Real repository operations (branches, PRs, files)
-- **Workflow Engine**: State machine with approval gates
+- **Workflow Engine**: State machine with approval gates and risk assessment
 - **REST API**: Clean endpoints for frontend integration
 
 ### **Frontend (Next.js 14)**
@@ -104,27 +112,31 @@ This comprehensive test:
 - **Modern UI**: Beautiful, responsive design with dark mode
 - **Real-time Updates**: Live status monitoring and progress tracking
 - **Dashboard**: Comprehensive overview of all runs
-- **Interactive Workflow**: Approve/reject gates with comments
+- **Interactive Workflow**: Approve/reject gates with detailed risk assessment
 
 ### **AI-Powered Features**
 
-- **Intelligent Analysis**: Understands issue context and requirements
-- **Custom Solutions**: Generates specific fixes for each issue type
-- **Professional Quality**: Creates comprehensive, well-formatted content
-- **Context-Aware**: Tailors solutions to repository and issue specifics
+- **Portia Analysis**: Deep issue understanding with root cause analysis
+- **Intelligent Fix Generation**: AI-powered code fixes and test cases
+- **Risk Assessment**: Comprehensive safety and quality evaluation
+- **Context-Aware Solutions**: Project-specific recommendations and best practices
 
 ## 📁 Project Structure
 
 ```
-autopilot_app_complete/
+AI-Powered-Bug-to-PR-Autopilot-with-Portia-Integration/
 ├── backend/
 │   ├── main.py                 # FastAPI application
 │   ├── services/
 │   │   ├── runs.py            # Run management and workflow
 │   │   ├── github.py          # GitHub API integration
-│   │   └── ai_fix_generator.py # AI-powered fix generation
+│   │   ├── ai_fix_generator.py # AI-powered fix generation
+│   │   ├── intelligent_fix.py  # Intelligent fix logic
+│   │   ├── portia_service.py   # Portia AI integration
+│   │   └── repo_analyzer.py    # Repository analysis
 │   └── agent/
-│       └── plan.py            # Workflow plan definition
+│       ├── plan.py            # Workflow plan definition
+│       └── portia_integration.py # Portia SDK integration
 ├── frontend/
 │   ├── app/
 │   │   ├── page.tsx           # Landing page
@@ -136,10 +148,8 @@ autopilot_app_complete/
 │   └── config.yaml            # Repository allowlist and settings
 ├── install_and_run.py         # One-command setup and run
 ├── test_ai_powered.py         # AI integration test
-├── AI_SETUP.md               # AI setup guide
-├── setup_ai.sh               # AI setup helper
-├── PROJECT_DETAILS.md        # Comprehensive project documentation
-└── README.md                 # This file
+├── PROJECT_DETAILS.md         # Comprehensive project documentation
+└── README.md                  # This file
 ```
 
 > 📖 **For detailed project information, architecture, and technical details, see [PROJECT_DETAILS.md](PROJECT_DETAILS.md)**
@@ -162,59 +172,70 @@ allowlist:
 # Required
 GITHUB_TOKEN=ghp_your_token_here
 OPENAI_API_KEY=sk-your_key_here
+PORTIA_API_KEY=your_portia_key_here
 
 # Optional
-PORTIA_API_KEY=your_portia_key  # For advanced AI features
+PORTIA_API_ENDPOINT=https://api.portialabs.ai
 ```
 
 ## 🎯 Example Workflow
 
-### **1. Issue Analysis**
+### **1. Issue Analysis with Portia**
 
-AI analyzes the GitHub issue:
+Portia AI analyzes the GitHub issue:
 
 ```json
 {
-  "issue_type": "documentation",
-  "priority": "medium",
-  "required_actions": ["Create CONTRIBUTING.md"],
-  "files_to_create": ["CONTRIBUTING.md"],
-  "solution_approach": "Create comprehensive contributing guidelines"
+  "issue_classification": {
+    "type": "bug",
+    "severity": "high",
+    "complexity": "moderate",
+    "impact_scope": "module-wide"
+  },
+  "root_cause_analysis": {
+    "primary_cause": "Race condition in data processing",
+    "contributing_factors": ["Async operations", "Missing locks"],
+    "system_implications": "Data corruption in high-load scenarios"
+  }
 }
 ```
 
 ### **2. Intelligent Fix Generation**
 
-AI creates professional content:
+AI creates comprehensive solution:
 
-```markdown
-# Contributing to Your Repository
+```python
+# Generated test case
+def test_data_race_condition():
+    """Test to reproduce the race condition issue"""
+    # Test implementation
+    pass
 
-Thank you for your interest in contributing! This document provides...
-
-## Getting Started
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## Code of Conduct
-
-We are committed to providing a welcoming environment...
+# Generated fix
+def fix_data_race_condition():
+    """Fix for the race condition using proper locking"""
+    # Fix implementation
+    pass
 ```
 
 ### **3. Professional PR Creation**
 
 AI generates comprehensive PR:
 
-- **Title**: "Add CONTRIBUTING.md with comprehensive guidelines"
-- **Body**: Detailed description with technical details and impact assessment
-- **Files**: All necessary files with proper content
+- **Title**: "Fix race condition in data processing module"
+- **Body**: Detailed description with risk assessment and impact analysis
+- **Files**: All necessary files with proper content and tests
 
 ## 🚨 Troubleshooting
 
 ### **Common Issues**
+
+#### **"Portia API key not found"**
+
+```bash
+export PORTIA_API_KEY=your_portia_key_here
+# Or add to .env file
+```
 
 #### **"OpenAI API key not found"**
 
@@ -256,12 +277,19 @@ sudo apt install python3.9  # Ubuntu
 
 ## 🎉 Features
 
-### **AI-Powered Intelligence**
+### **Portia AI-Powered Intelligence**
 
-- ✅ **Smart Issue Analysis**: Understands context and requirements
-- ✅ **Custom Fix Generation**: Creates specific solutions for each issue
-- ✅ **Professional Quality**: Generates comprehensive, well-formatted content
-- ✅ **Context-Aware**: Tailors solutions to repository specifics
+- ✅ **Advanced Issue Analysis**: Deep understanding with root cause analysis
+- ✅ **Intelligent Workflow Planning**: Optimal process design based on context
+- ✅ **Risk Assessment**: Comprehensive safety and quality evaluation
+- ✅ **Context-Aware Recommendations**: Project-specific solutions
+
+### **OpenAI-Powered Content Generation**
+
+- ✅ **Smart Fix Generation**: Creates specific solutions for each issue
+- ✅ **Test Case Creation**: Generates comprehensive test scenarios
+- ✅ **Professional Documentation**: Creates detailed PR descriptions
+- ✅ **Code Quality**: Ensures adherence to best practices
 
 ### **GitHub Integration**
 
@@ -272,7 +300,7 @@ sudo apt install python3.9  # Ubuntu
 
 ### **Workflow Management**
 
-- ✅ **Approval Gates**: Human oversight with approve/reject options
+- ✅ **Human-in-the-Loop Approval**: Two-stage approval process
 - ✅ **Real-time Monitoring**: Live status updates and progress tracking
 - ✅ **Comprehensive Logging**: Detailed logs of all operations
 - ✅ **Error Handling**: Graceful fallbacks and error recovery
@@ -294,7 +322,7 @@ sudo apt install python3.9  # Ubuntu
 
 ### **Data Privacy**
 
-- Only issue content is sent to OpenAI for analysis
+- Only issue content is sent to AI services for analysis
 - No data is stored beyond the API call
 - All operations are logged for transparency
 
@@ -311,7 +339,7 @@ Once the system is running:
 1. **Test with Different Issues**: Try various types of issues to see AI capabilities
 2. **Customize AI Prompts**: Modify prompts in `backend/services/ai_fix_generator.py`
 3. **Add More Repositories**: Update `config/config.yaml` with your repositories
-4. **Monitor Usage**: Keep track of OpenAI API usage and costs
+4. **Monitor Usage**: Keep track of API usage and costs
 5. **Scale Up**: Use for multiple repositories and teams
 
 ## 📞 Support
@@ -341,4 +369,4 @@ python install_and_run.py
 
 ---
 
-**The AI-Powered Bug-to-PR Autopilot is ready to intelligently analyze issues and generate professional solutions!** 🚀
+**The AI-Powered Bug-to-PR Autopilot with Portia Integration is ready to intelligently analyze issues and generate professional solutions!** 🚀
